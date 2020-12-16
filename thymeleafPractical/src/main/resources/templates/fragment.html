@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Thymeleaf fragment</title>
+</head>
+<body>
+	<h1 style="text-align: center;">
+		<u><b>fragment(include,insert,replace)</b></u>
+	</h1>
+
+	<!-- Going to bring footer here -->
+
+	<!--
+		 			EXAMPLE OF DYNAMIC VALUE
+	 	thymeleaf passing dynamic value to template while including
+		
+		<footer id="hostTag"
+		th:replace="footer::footer1('About Learning Thymeleaf')"></footer>
+		
+	
+		///////////////
+		<footer id="hostTag" th:replace="footer::footer1(${title},${subtitle})"></footer>
+			
+			It's coming from MyController class under serviceHandler
+
+		///////////////
+		
+	 -->
+
+	<footer id="hostTag" th:replace="footer::footer1(${title},${subtitle})"></footer>
+
+
+
+
+	<!-- 
+					This is for replace tag
+	 <footer id="hostTag" th:replace="footer::footer1"></footer>
+	 
+	 	<footer id="fragmentTag">
+
+			<div  class=" container"  >
+				<h1>About Learning Thymeleaf</h1>
+				<h2>Provide Good content about programming</h2>
+				<h1>Feel free to content and work with me</h1>
+			</div>
+
+		</footer>	 
+	 -->
+
+
+
+	<!--
+					This is for insert tag
+
+	<footer id="hostTag" th:insert="footer::footer1"></footer>
+
+
+	Example :-
+	
+			<footer id="hostTag"><footer id="fragmentTag">
+
+					<div  class=" container"  >
+						<h1>About Learning Thymeleaf</h1>
+						<h2>Provide Good content about programming</h2>
+						<h1>Feel free to content and work with me</h1>
+					</div>
+
+			</footer></footer>
+ -->
+
+
+	<!--
+					This is for include tag
+
+ 	<footer id="hostTag" th:include="footer::footer1"></footer>
+ 
+ 		<footer id="hostTag">
+
+			<div  class=" container"  >
+				<h1>About Learning Thymeleaf</h1>
+				<h2>Provide Good content about programming</h2>
+				<h1>Feel free to content and work with me</h1>
+			</div>
+	</footer> 
+ -->
+
+
+
+
+
+</body>
+</html>

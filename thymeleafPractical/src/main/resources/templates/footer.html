@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Footer Template</title>
+</head>
+<body>
+
+
+	<!--
+		 			EXAMPLE OF DYNAMIC VALUE
+	 	thymeleaf passing dynamic value to template while including
+	
+		<footer id="fragmentTag" th:fragment="footer1(title)">
+	
+	 -->
+
+	<footer id="fragmentTag" th:fragment="footer1(title,subtitle)">
+
+		<div class=" container">
+			<h1 th:text="${title}"></h1>
+			<h1 th:text="${subtitle}"></h1>
+			<h2>Provide Good content about programming</h2>
+			<h1>Feel free to content and work with me</h1>
+		</div>
+
+	</footer>
+	<footer th:fragment="footer2">
+
+		<div class=" container">
+			<h1>About ABCD asdasd</h1>
+			<h2>Provide Goodasdasdasdassd adasdasd content about programming</h2>
+			<h1>Feel free to content and work withsdasdasdsa asdasdsadasa me</h1>
+		</div>
+
+	</footer>
+
+
+
+</body>
+</html>

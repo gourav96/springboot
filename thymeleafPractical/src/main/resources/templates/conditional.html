@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Condition Statements</title>
+</head>
+<body>
+	<h1 style="text-align: center;">
+		<u><b>Study Condition Statements in Thymeleaf</b></u>
+	</h1>
+
+	<div>
+
+		<h2>
+			<u>Elvis Operator</u>
+		</h2>
+		<h2>
+			User is <span th:style="${isActive} ? 'color:green;' : 'color:red;'"
+				th:text="${isActive} ? 'ACTIVE' : 'NOT ACTIVE' "></span>
+		</h2>
+
+	</div>
+
+	<h1 style="text-align: center;">
+		<u>If Condition</u>
+	</h1>
+
+	<h3 th:if="${gender}=='M'">Male</h3>
+	<h3 th:unless="${gender}=='M'">Female</h3>
+
+
+	<h1 style="text-align: center;">
+		<u>Switch case</u>
+	</h1>
+
+
+	<div th:switch="${#lists.size(mylist)}">
+
+		<h3 th:case="'0'">List Contain Zero Element</h3>
+		<h3 th:case="'1'">List Contain One Element</h3>
+		<h3 th:case="*">List Contain More Then One Element</h3>
+
+	</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
